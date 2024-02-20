@@ -1,0 +1,13 @@
+package com.girusoft.repository;
+
+import com.girusoft.model.entities.UserEntity;
+import com.girusoft.model.entities.UserRoleEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface IUserRoleRepository extends JpaRepository<UserRoleEntity, Long> {
+    List<UserRoleEntity> findByUser(UserEntity user);
+}
