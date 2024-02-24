@@ -2,7 +2,11 @@ name: CICD
 
 on:
   push:
-    branches: [feature/deploy-to-ec2]
+    branches:
+      - feature/deploy-to-ec2
+      - main
+      - develop
+      - stg
 
 jobs:
   build:
