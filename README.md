@@ -38,7 +38,7 @@ curl -X POST \
   http://localhost:8081/api/v1/user/roles \
   -H 'Content-Type: application/json' \
   -d '{
-    "email": "nestor.florez@globant.com"
+    "email": "ingefabianflorez@gmail.com"
   }'
 
 ```
