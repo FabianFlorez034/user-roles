@@ -1,19 +1,18 @@
 server:
   servlet:
      context-path: /api/v1
-  port: 8081
+  port: 8080
 
-#
-# h2 database
-#
 spring:
   datasource:
     url: jdbc:h2:mem:test
+    #url: jdbc:mysql://localhost:3306/user_roles?useSSL=false&serverTimezone=UTC
     driverClassName: org.h2.Driver
     username: sa
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    #database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
     defer-datasource-initialization: true
