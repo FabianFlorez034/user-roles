@@ -15,8 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @ToString
-public class ResponseDTO {
+public class ResponseDto {
 
-    private UserResponseDTO user;
+    private UserResponseDto user;
     private List<UserRoleDto> roles;
 }

@@ -3,7 +3,6 @@ name: CI-CD
 on:
   push:
     branches:
-      - feature/deploy-to-ec2
       - main
       - develop
       - stg

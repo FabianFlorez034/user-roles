@@ -1,5 +1,6 @@
-package com.girusoft.controller;
+package com.girusoft.controller.impl;
 
+import com.girusoft.controller.IRoleController;
 import com.girusoft.model.entities.RoleEntity;
 import com.girusoft.service.IRoleService;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ import java.util.List;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/roles")
-public class RoleController {
+public class RoleController implements IRoleController {
 
     private final IRoleService roleService;
 

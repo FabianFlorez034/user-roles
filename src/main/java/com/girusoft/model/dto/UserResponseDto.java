@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserResponseDTO {
+public class UserResponseDto {
 
     private String givenName;
     private String familyName;
