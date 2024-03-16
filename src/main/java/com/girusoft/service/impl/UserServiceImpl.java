@@ -1,13 +1,14 @@
 package com.girusoft.service.impl;
 
-import com.girusoft.model.dto.ResponseDto;
+import com.girusoft.exception.ResourceNotFoundException;
+import com.girusoft.model.payload.ResponseDto;
+import com.girusoft.model.payload.UserResponseDto;
 import com.girusoft.model.dto.UserRoleDto;
 import com.girusoft.model.entities.UserEntity;
 import com.girusoft.model.mappers.UserRolesMapper;
 import com.girusoft.repository.IUserRepository;
 import com.girusoft.repository.IUserRoleRepository;
 import com.girusoft.service.IUserService;
-import jakarta.persistence.EntityNotFoundException;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,7 @@ public class UserServiceImpl implements IUserService {
     public ResponseDto retrieveUserByEmail(String email) {
 
         UserEntity user = iUserRepository.findByEmail(email)
-                .orElseThrow(() -> new EntityNotFoundException("User not found with email: " + email));
+                .orElseThrow(() -> new ResourceNotFoundException("User", "email", email));
 
         List<UserRoleDto> roles = userRoleRepository.findByUser(user)
                 .stream()
@@ -35,5 +36,17 @@ public class UserServiceImpl implements IUserService {
                         .getRolName())).toList();
 
         return userRolesMapper.mapToDTO(user, roles);
+    }
+
+    @Override
+    public UserResponseDto findById(Long id) {
+        var user = iUserRepository.findById(id);
+        if (user.isEmpty())
+            throw new ResourceNotFoundException("User", "id", id);
+        return UserResponseDto.builder()
+                .name(user.get().getName())
+                .email(user.get().getEmail())
+                .build();
+
     }
 }

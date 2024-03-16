@@ -1,4 +1,4 @@
-package com.girusoft.model.dto;
+package com.girusoft.model.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

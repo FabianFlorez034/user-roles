@@ -1,7 +1,9 @@
 package com.girusoft.controller;
 
 import com.girusoft.model.dto.Request;
-import com.girusoft.model.dto.ResponseDto;
+import com.girusoft.model.payload.ResponseDto;
+import com.girusoft.model.payload.UserResponseDto;
+import com.girusoft.model.entities.UserEntity;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,4 +21,10 @@ public interface IUserController {
             @ApiResponse(responseCode = "201", description = "User got by email successfully", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = ResponseDto.class))})})
     ResponseEntity<ResponseDto> retrieveUserByEmail(Request request);
+
+    @Operation(summary = "This endpoint get a user by id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "201", description = "User got by id successfully", content = {
+                    @Content(mediaType = "application/json", schema = @Schema(implementation = UserEntity.class))})})
+    ResponseEntity<UserResponseDto> retrieveUserById(Long id);
 }

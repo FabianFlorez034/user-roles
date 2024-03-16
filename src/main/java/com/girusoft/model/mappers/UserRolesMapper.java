@@ -1,7 +1,7 @@
 package com.girusoft.model.mappers;
 
-import com.girusoft.model.dto.ResponseDto;
-import com.girusoft.model.dto.UserResponseDto;
+import com.girusoft.model.payload.ResponseDto;
+import com.girusoft.model.payload.UserResponseDto;
 import com.girusoft.model.dto.UserRoleDto;
 import com.girusoft.model.entities.UserEntity;
 import org.mapstruct.Mapper;

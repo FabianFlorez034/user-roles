@@ -1,4 +1,6 @@
-package com.girusoft.model.dto;
+package com.girusoft.model.payload;
+
+import com.girusoft.model.dto.UserRoleDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
