@@ -1,4 +1,6 @@
-package com.girusoft.model.dto;
+package com.girusoft.model.payload;
+
+import com.girusoft.model.dto.UserRoleDto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,8 +17,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 @ToString
-public class ResponseDTO {
+public class ResponseDto {
 
-    private UserResponseDTO user;
+    private UserResponseDto user;
     private List<UserRoleDto> roles;
 }

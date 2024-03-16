@@ -1,9 +1,12 @@
 package com.girusoft.service;
 
 
-import com.girusoft.model.dto.ResponseDTO;
+import com.girusoft.model.payload.ResponseDto;
+import com.girusoft.model.payload.UserResponseDto;
 
 public interface IUserService {
 
-    ResponseDTO retrieveUserByEmail(String email);
+    ResponseDto retrieveUserByEmail(String email);
+
+    UserResponseDto findById(Long id);
 }

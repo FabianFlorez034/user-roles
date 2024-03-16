@@ -1,4 +1,4 @@
-package com.girusoft.model.dto;
+package com.girusoft.model.payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserResponseDTO {
+public class UserResponseDto {
 
     private String givenName;
     private String familyName;
