@@ -29,9 +29,13 @@ spring.h2.console.enabled= true
 spring.jpa.hibernate.ddl-auto=create
 ```
 
-With this configuration, you can access the H2 Console at http://localhost:8080/h2-console (assuming the application is running on the default port).
+With this configuration, you can access the H2 Console at http://localhost:8081/api/v1/h2-console (assuming the application is running on the default port).
 To log in you have to use the username "sa" and the password is empty.
 Do not forget to change the JDBC URL to jdbc:h2:mem:test in the console.
+
+## Swagger
+http://localhost:8081/api/v1/swagger-ui/index.html 
+
 
 ```curl
 curl -X POST \
