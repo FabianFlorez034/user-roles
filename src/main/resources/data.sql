@@ -1,18 +1,57 @@
 INSERT INTO ROLES(role_name)
-SELECT 'ADMIN'
+SELECT 'ADMINISTRATOR'
     WHERE NOT EXISTS (
     SELECT 1
     FROM ROLES
-    WHERE role_name = 'ADMIN'
+    WHERE role_name = 'ADMINISTRATOR'
 );
 
 INSERT INTO ROLES(role_name)
-SELECT 'USER'
+SELECT 'STANDARD USER'
     WHERE NOT EXISTS (
     SELECT 1
     FROM ROLES
-    WHERE role_name = 'USER'
+    WHERE role_name = 'STANDARD USER'
 );
+INSERT INTO ROLES(role_name)
+SELECT 'SUPERVISOR'
+    WHERE NOT EXISTS (
+    SELECT 1
+    FROM ROLES
+    WHERE role_name = 'SUPERVISOR'
+);
+
+INSERT INTO ROLES(role_name)
+SELECT 'CLIENT'
+    WHERE NOT EXISTS (
+    SELECT 1
+    FROM ROLES
+    WHERE role_name = 'CLIENT'
+);
+INSERT INTO ROLES(role_name)
+SELECT 'ANALYST'
+    WHERE NOT EXISTS (
+    SELECT 1
+    FROM ROLES
+    WHERE role_name = 'ANALYST'
+);
+
+INSERT INTO ROLES(role_name)
+SELECT 'HACKER'
+    WHERE NOT EXISTS (
+    SELECT 1
+    FROM ROLES
+    WHERE role_name = 'HACKER'
+);
+
+INSERT INTO ROLES(role_name)
+SELECT 'Hackerank'
+    WHERE NOT EXISTS (
+    SELECT 1
+    FROM ROLES
+    WHERE role_name = 'Hackerank'
+);
+
 
 
 
