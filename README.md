@@ -52,3 +52,9 @@ curl -X GET \
   http://localhost:8081/api/v1/roles \
   -H 'Content-Type: application/json'
 ```
+
+
+## Deploy to EC2
+
+- GitHub Actions, Docker and EC2
+![img.png](img.png)
